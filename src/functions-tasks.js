@@ -18,7 +18,11 @@
  *
  */
 function getCurrentFunctionName() {
-  throw new Error('Not implemented');
+  function getFunctionName(func) {
+    return func.name;
+  }
+
+  return getFunctionName(getCurrentFunctionName);
 }
 
 /**
